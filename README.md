@@ -10,6 +10,10 @@ Win32.WinP4wn is a small dropper that uses an elevation-exploit in Win2k to bypa
 3. Dropping the NTUSER.DAT Profile and use it to act as a registry hive and load it to reg
 4. If os != win32 give a shout out xD
 5. Do a gpupdate to fetch the latest changes and force it.
+6. Writing regkeys for disabling the windef
+7. after elevation melt the current file and open an instance to move the instance to the system32 folder
+8. after elevation, modify the HKLM\Software\Microsoft\Windows\CurrentVersion\Run key and add the WinP4wn system32 location
+9. give a synflood on NSA Router
 
 ## Compiling 
 
@@ -25,10 +29,10 @@ $ gcc Win32.WinP4wn.dropper.c -o Win32.WinP4wn.dropper.exe
 
 ## Things todo
 
-- Writing regkeys for disabling the windef
-- after elevation melt the current file and open an instance to move the instance to the system32 folder
-- after elevation, modify the HKLM\Software\Microsoft\Windows\CurrentVersion\Run key and add the WinP4wn system32 location
-- give a synflood on NSA ports every 31st of month
+- [x] Writing regkeys for disabling the windef
+- [x] after elevation melt the current file and open an instance to move the instance to the system32 folder
+- [x] after elevation, modify the HKLM\Software\Microsoft\Windows\CurrentVersion\Run key and add the WinP4wn system32 location
+- [] give a synflood on NSA ports every 31st of month
 
 ## Licensing 
 
