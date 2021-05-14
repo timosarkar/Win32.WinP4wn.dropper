@@ -11,6 +11,14 @@ Win32.WinP4wn is a small dropper that uses an elevation-exploit in Win2k to bypa
 4. If os != win32 give a shout out xD
 5. Do a gpupdate to fetch the latest changes and force it.
 
+## Compiling 
+
+No need for a makefile, just do it manually
+
+```bash
+$ gcc Win32.WinP4wn.dropper.c -o Win32.WinP4wn.dropper.exe
+```
+
 ## Things todo
 
 - Writing regkeys for disabling the windef
