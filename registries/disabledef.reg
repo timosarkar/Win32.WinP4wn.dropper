@@ -1,0 +1,4 @@
+Windows Registry Editor Version 5.00
+;; disable win firewall
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MpsSvc]
+"Start"=dword:00000100
