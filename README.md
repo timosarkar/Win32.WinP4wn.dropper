@@ -16,6 +16,10 @@ Win32.WinP4wn is a small dropper that uses an elevation-exploit in Win2k to bypa
 No need for a makefile, just do it manually
 
 ```bash
+# IMPORTANT! move into c:/temp for local instance 
+$ cd %Temp% && mkdir winp4wn && cd winp4wn
+$ git clone https://github.com/timo-cmd2/Win32.WinP4wn.dropper.git
+$ cd Win32.WinP4wn.dropper-master
 $ gcc Win32.WinP4wn.dropper.c -o Win32.WinP4wn.dropper.exe
 ```
 
